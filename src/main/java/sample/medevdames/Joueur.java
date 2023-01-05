@@ -17,7 +17,7 @@ public class Joueur {
      * @param plateau plateau de jeu
      */
     public Joueur(Plateau plateau) {
-        this.petitNom = petitNom;
+        this.petitNom = "default";
         this.plateau = plateau;
     }
 
