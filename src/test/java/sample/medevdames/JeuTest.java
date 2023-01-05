@@ -32,8 +32,9 @@ public class JeuTest {
     @Test
     public void testRunJeu() {
         System.out.println("runJeu");
-        Jeu instance = new Jeu();
-        instance.runJeu();
+        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
+        Jeu instance = new Jeu(plat);
+        //instance.runJeu();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -44,7 +45,8 @@ public class JeuTest {
     @Test
     public void testAffiche() {
         System.out.println("affiche");
-        Jeu instance = new Jeu();
+        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
+        Jeu instance = new Jeu(plat);
         instance.affiche();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -56,12 +58,11 @@ public class JeuTest {
     @Test
     public void testResteDeuxCouleurs() {
         System.out.println("resteDeuxCouleurs");
-        Jeu instance = new Jeu();
-        boolean expResult = false;
+        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
+        Jeu instance = new Jeu(plat);
+        boolean expResult = true;
         boolean result = instance.resteDeuxCouleurs();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
