@@ -25,32 +25,32 @@ public class JeuTest {
     @AfterAll
     public static void tearDownClass() {
     }
-
-    /**
-     * Test of runJeu method, of class Jeu.
-     */
-    @Test
-    public void testRunJeu() {
-        System.out.println("runJeu");
-        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
-        Jeu instance = new Jeu(plat);
-        //instance.runJeu();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of affiche method, of class Jeu.
-     */
-    @Test
-    public void testAffiche() {
-        System.out.println("affiche");
-        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
-        Jeu instance = new Jeu(plat);
-        instance.affiche();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
+//    /**
+//     * Test of runJeu method, of class Jeu.
+//     */
+//    @Test
+//    public void testRunJeu() {
+//        System.out.println("runJeu");
+//        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
+//        Jeu instance = new Jeu(plat);
+//        //instance.runJeu();
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of affiche method, of class Jeu.
+//     */
+//    @Test
+//    public void testAffiche() {
+//        System.out.println("affiche");
+//        Plateau plat = new Plateau(); //plateau normal avec des pions des deux couleurs
+//        Jeu instance = new Jeu(plat);
+//        instance.affiche();
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of resteDeuxCouleurs method, of class Jeu.
