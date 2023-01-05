@@ -115,7 +115,7 @@ public class Jeu {
     
     /**
      * Méthode qui retourne le pion situé aux coordonnées x, y dans la liste de pions, ou null s'il n'y a pas de pion à ces coordonnées
-     * utile pour l'affichage
+     * utile pour l'affichage du plateau
      */
     private Pion getPion(List<Pion> pions, int x, int y) {
         for (Pion pion : pions) {
