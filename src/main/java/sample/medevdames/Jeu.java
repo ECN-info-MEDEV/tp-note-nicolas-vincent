@@ -22,6 +22,16 @@ public class Jeu {
         this.initialiseJoueurs();
     }
 
+    /**
+     * constructeur de Jeu utilisé pour les tests
+     * On ne lance pas initialiseJoueurs() pour éviter les saisie des noms au clavier
+     * @param plateauJeu plateau de jeu custom pour tester différentes situations de jeu
+     */
+    public Jeu(Plateau plateauJeu) {
+        this.plateauJeu = plateauJeu;
+        this.jeuEnCours = true;
+    }
+
     
     
     /**
