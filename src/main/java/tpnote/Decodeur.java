@@ -16,12 +16,13 @@ import java.util.Scanner;
 public class Decodeur implements Placer {
     private String nom;
 
+
     public Decodeur(String nom){
         this.nom = nom;
     }
 
     @Override
-    public void Placer(Ligne ligne) {
+    public void placer(Ligne ligne) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(nom + ", place les pions sur le plateau un par un");
@@ -38,6 +39,7 @@ public class Decodeur implements Placer {
 
                 System.out.print(" " + i + " : ");
                 input = scanner.next();
+                input = input.toString();
 
                 if (verifInput(input)){
                     inputValide = true;
@@ -64,7 +66,7 @@ public class Decodeur implements Placer {
         }
 
         for (int i = 0 ; i < Partie.couleurs.length ; i++){
-            if (input == Partie.couleurs[i]){
+            if (input.equals(Partie.couleurs[i].toString())){
                 verif = true;
             }
         }
@@ -94,6 +96,7 @@ public class Decodeur implements Placer {
     public static void main(String[] args) {
         System.out.println("Hello");
 
-        System.out.println(Partie.couleurs.length);
+        Decodeur decodeur = new Decodeur("Nicolas");
+        decodeur.placer(new Ligne());
     }
 }
