@@ -91,7 +91,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <exec.mainClass>tpnote.HelloMain</exec.mainClass>
-        <sonar.organization>ECN-info-MEDEV</sonar.organization>
+        <sonar.organization>vgros-jean</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 </project>
