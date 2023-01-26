@@ -15,5 +15,10 @@ public class Decodeur extends Joueur {
     public Decodeur(String nom) {
         super(nom);
     }    
+    
+    public Decodeur(String nom,int points) {
+        super(nom,points);
+        
+    }    
 
 }
