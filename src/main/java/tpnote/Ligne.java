@@ -71,5 +71,38 @@ public class Ligne {
         this.ficheB = ficheB;
     }
     
+    //méthodes
+    
+    /**
+     * vérifie si la ligne contient 4 fiches noires (=code trouvé)
+     * @return true si le bon code a été trouvé
+     */
+    public boolean verifLigneComplete(){
+        return ficheN == 4;
+    }
+    
+    /**
+     * place les fiches dans la ligne
+     * @param n nombre de fiche noires données par l'utilisateur
+     * @param b  nombre de fiches blanches
+     */
+    public void placeFiche(int n, int b) {
+        this.ficheN = n;
+        this.ficheB = b;
+    }
+    
+    /**
+     * place les pions proposés par le décodeur dans la ligne
+     * @param pion1
+     * @param pion2
+     * @param pion3
+     * @param pion4 
+     */
+    public void placePion(String pion1, String pion2, String pion3, String pion4){
+        this.ligne[0] = pion1;
+        this.ligne[1] = pion2;
+        this.ligne[2] = pion3;
+        this.ligne[3] = pion4;
+    }
     
 }
