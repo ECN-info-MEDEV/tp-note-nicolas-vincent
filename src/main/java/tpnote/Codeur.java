@@ -21,13 +21,12 @@ public class Codeur extends Joueur {
 
 
     
-    public Ligne verifie(Ligne ligne){
+    public void verifie(Ligne ligne){
         System.out.println("Le décodeur a placé les pions suivants :");
         ligne.afficher();
         System.out.println("Le codeur doit placer les fiches.");
         ligne.setFicheN(this.nombreFiches("noires"));
         ligne.setFicheB(this.nombreFiches("blanches"));
-        return ligne;
     }
     
     public int nombreFiches(String couleur) {
