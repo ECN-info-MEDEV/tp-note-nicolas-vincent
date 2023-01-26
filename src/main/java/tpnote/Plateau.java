@@ -5,30 +5,34 @@
  */
 package tpnote;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author samyamal
  */
 public class Plateau {
     
-    private Ligne[] lignes = new Ligne[12];
+    private List<Ligne> lignes;
 
     public Plateau() {
+        this.lignes = new ArrayList<>(12);
     }
 
-    public Ligne[] getPlateau() {
+    public List<Ligne> getPlateau() {
         return lignes;
     }
 
-    public void setPlateau(Ligne[] plateau) {
+    public void setPlateau(List<Ligne> plateau) {
         this.lignes = plateau;
     }
     
     public void afficher(){
         int ligne = 0;
-        while(this.lignes[ligne] != null){
-            this.lignes[ligne].afficher();
-            System.out.println("Nombre de fiches Noires "+this.lignes[ligne].getFicheN()+"Nombre de fiches Blanches "+this.lignes[ligne].getFicheB());
+        while(!this.lignes.get(ligne).getLigne().isEmpty()){
+            this.lignes.get(ligne).afficher();
+            System.out.println("Nombre de fiches Noires "+this.lignes.get(ligne).getFicheN()+"Nombre de fiches Blanches "+this.lignes.get(ligne).getFicheB());
         }
     }
 }
