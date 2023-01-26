@@ -9,6 +9,18 @@ package tpnote;
  *
  * @author samyamal
  */
-public class Codeur {
+public class Codeur extends Joueur {
     private int points;
+
+    public Codeur(String nom) {
+        super(nom);
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }
