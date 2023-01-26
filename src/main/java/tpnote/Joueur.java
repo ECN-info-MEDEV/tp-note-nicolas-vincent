@@ -10,17 +10,29 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
+ * classe abstraite représentant les joueurs
  * @author samyamal
  */
 public abstract class Joueur {
 
+    /**
+     * nom du joueur
+     */
     private String nom;
 
+    /**
+     * constructeur de joueur
+     * @param nom 
+     */
     public Joueur(String nom){
         this.nom = nom;
     }
 
+    /**
+     * permet à un joueur de placier 4 pions de couleurs
+     * (utilisé pour setup le jeu par le codeur au début)
+     * @param ligne 
+     */
     public void placer(Ligne ligne) {
             Scanner scanner = new Scanner(System.in);
 
@@ -52,7 +64,7 @@ public abstract class Joueur {
     }
 
     /**
-     * On vérifie que l'input est dans la liste des couleurs possibles
+     * On vérifie que l'input de l'utilisateur est dans la liste des couleurs possibles
      */
     private boolean verifInput(String input){
 
@@ -62,11 +74,11 @@ public abstract class Joueur {
             return false;
             }
 
-            for (int i = 0 ; i < Partie.couleurs.length ; i++){
-            if (input.equals(Partie.couleurs[i].toString())){
-            verif = true;
+        for (String couleur : Partie.couleurs) {
+            if (input.equals(couleur.toString())) {
+                verif = true;
             }
-            }
+        }
 
             return verif;
             }
@@ -76,8 +88,8 @@ public abstract class Joueur {
      */
     private void afficheCouleursDispo(){
         System.out.println("Cette couleur n'existe pas, choisissez dans :");
-        for (int i = 0 ; i < Partie.couleurs.length ; i++){
-            System.out.println(Partie.couleurs[i]);
+        for (String couleur : Partie.couleurs) {
+            System.out.println(couleur);
         }
     }
 
