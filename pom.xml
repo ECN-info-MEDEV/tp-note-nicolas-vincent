@@ -78,7 +78,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>sample.medevdames.MedevDames</exec.mainClass>
+        <exec.mainClass>tpnote.HelloMain</exec.mainClass>
         <sonar.organization>vgros-jean</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
