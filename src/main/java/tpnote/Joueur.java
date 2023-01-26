@@ -24,7 +24,7 @@ public abstract class Joueur {
      * constructeur de joueur
      * @param nom 
      */
-    public Joueur(String nom){
+    protected Joueur(String nom){
         this.nom = nom;
     }
 
@@ -50,7 +50,6 @@ public abstract class Joueur {
 
                             System.out.print(" " + i + " : ");
                             input = scanner.next();
-                            input = input.toString();
 
                             if (verifInput(input)){
                                     inputValide = true;
@@ -75,7 +74,7 @@ public abstract class Joueur {
             }
 
         for (String couleur : Partie.couleurs) {
-            if (input.equals(couleur.toString())) {
+            if (input.equals(couleur)) {
                 verif = true;
             }
         }
