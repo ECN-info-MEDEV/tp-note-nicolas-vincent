@@ -14,7 +14,9 @@ public class HelloMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Partie partie = new Partie();
+        partie.jeu();
+
     }
     
     //rajout pour push et test action github sonarcloud
