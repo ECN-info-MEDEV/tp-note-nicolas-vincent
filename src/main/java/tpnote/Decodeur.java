@@ -11,11 +11,19 @@ package tpnote;
  */
 public class Decodeur extends Joueur {
 
-
+    /**
+     * constructeur avec nom
+     * @param nom
+     */
     public Decodeur(String nom) {
         super(nom);
     }    
     
+    /**
+     * contructeur avec nom et nombre de points
+     * @param nom
+     * @param points 
+     */
     public Decodeur(String nom,int points) {
         super(nom,points);
         

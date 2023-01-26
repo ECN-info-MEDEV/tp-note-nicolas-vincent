@@ -46,7 +46,7 @@ public abstract class Joueur {
     }
 
     /**
-     * permet à un joueur de placier 4 pions de couleurs
+     * permet à un joueur de placer 4 pions de couleurs
      * (utilisé pour setup le jeu par le codeur au début)
      * @param ligne 
      */
@@ -81,6 +81,7 @@ public abstract class Joueur {
 
     /**
      * On vérifie que l'input de l'utilisateur est dans la liste des couleurs possibles
+     * @param input
      */
     public boolean verifInput(String input){
 
