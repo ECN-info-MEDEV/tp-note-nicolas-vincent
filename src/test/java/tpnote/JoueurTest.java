@@ -17,87 +17,24 @@ public class JoueurTest {
     
     public JoueurTest() {
     }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
 
     /**
-     * Test of placer method, of class Joueur.
+     * Test de vérif input
      */
     @Test
-    public void testPlacer() {
-        System.out.println("placer");
-        Ligne ligne = null;
-        Joueur instance = null;
-        instance.placer(ligne);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    public void testVerifInput() {
 
-    /**
-     * Test of getNom method, of class Joueur.
-     */
-    @Test
-    public void testGetNom() {
-        System.out.println("getNom");
-        Joueur instance = null;
-        String expResult = "";
-        String result = instance.getNom();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        Joueur joueur = new Joueur("Vincent") {
+            @Override
+            public boolean verifInput(String input) {
+                return super.verifInput(input);
+            }
+        };
 
-    /**
-     * Test of setNom method, of class Joueur.
-     */
-    @Test
-    public void testSetNom() {
-        System.out.println("setNom");
-        String nom = "";
-        Joueur instance = null;
-        instance.setNom(nom);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        assertTrue(joueur.verifInput("jaune"));
+        assertTrue(joueur.verifInput("rouge"));
+        assertTrue(joueur.verifInput("vert"));
 
-    /**
-     * Test of getPoints method, of class Joueur.
-     */
-    @Test
-    public void testGetPoints() {
-        System.out.println("getPoints");
-        Joueur instance = null;
-        int expResult = 0;
-        int result = instance.getPoints();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertFalse(joueur.verifInput("Cyan"));
     }
-
-    /**
-     * Test of setPoints method, of class Joueur.
-     */
-    @Test
-    public void testSetPoints() {
-        System.out.println("setPoints");
-        int points = 0;
-        Joueur instance = null;
-        instance.setPoints(points);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    public class JoueurImpl extends Joueur {
-
-        public JoueurImpl() {
-            super("");
-        }
-    }
-    
 }

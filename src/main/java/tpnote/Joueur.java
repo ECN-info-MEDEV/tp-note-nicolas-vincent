@@ -82,7 +82,7 @@ public abstract class Joueur {
     /**
      * On vérifie que l'input de l'utilisateur est dans la liste des couleurs possibles
      */
-    private boolean verifInput(String input){
+    public boolean verifInput(String input){
 
             boolean verif = false;
 
