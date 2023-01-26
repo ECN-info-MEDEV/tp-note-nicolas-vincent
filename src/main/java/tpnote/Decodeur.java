@@ -48,27 +48,38 @@ public class Decodeur implements Placer {
             }
         }
 
-        //ligne.placePion(listePion);
+        ligne.placePion(listePion);
 
     }
 
+    /**
+     * On vérifie que l'input est dans la liste des couleurs possibles
+     */
     private boolean verifInput(String input){
+
+        boolean verif = false;
 
         if (input.isEmpty()){
             return false;
         }
 
-        String couleur = Partie.couleurs[0];
+        for (int i = 0 ; i < Partie.couleurs.length ; i++){
+            if (input == Partie.couleurs[i]){
+                verif = true;
+            }
+        }
 
-        // TODO : écrire la vérif
-
-        return true;
+        return verif;
     }
 
+    /**
+     * Affiche les couleurs qu'il est possible de jouer
+     */
     private void afficheCouleursDispo(){
         System.out.println("Cette couleur n'existe pas, choisissez dans :");
-
-        // TODO : affiche les couleurs possibles
+        for (int i = 0 ; i < Partie.couleurs.length ; i++){
+            System.out.println(Partie.couleurs[i]);
+        }
     }
 
     public String getNom() {
@@ -82,5 +93,7 @@ public class Decodeur implements Placer {
 
     public static void main(String[] args) {
         System.out.println("Hello");
+
+        System.out.println(Partie.couleurs.length);
     }
 }

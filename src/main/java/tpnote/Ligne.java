@@ -5,6 +5,8 @@
  */
 package tpnote;
 
+import java.util.List;
+
 /**
  * Représente une ligne du jeu avec la proposition de 4 pions du décodeur et les fiches associés au décodage de cette proposition
  * @author samyamal
@@ -14,7 +16,7 @@ public class Ligne {
     /**
      * Code proposé par le décodeur, tableau de string avec les noms des couleurs
      */
-    private String[] ligne = new String[4];
+    private List<String> listPion;
     
     /**
      * nombre de fiche noires pour la ligne
@@ -28,12 +30,12 @@ public class Ligne {
 
     /**
      * constructeur complet pour une ligne
-     * @param ligne Code proposé par le décodeur
+     * @param listPion Code proposé par le décodeur
      * @param ficheN nombre de fiche noires pour la ligne
      * @param ficheB nombre de fiches blanches pour la ligne
      */
-    public Ligne(String[] ligne, int ficheN, int ficheB) {
-        this.ligne = ligne;
+    public Ligne(List<String> listPion, int ficheN, int ficheB) {
+        this.listPion = listPion;
         this.ficheN = ficheN;
         this.ficheB = ficheB;
     }
@@ -41,14 +43,18 @@ public class Ligne {
     /**
      * constructeur d'une ligne sans indiquer les flags (fiches)
      * ceux-ci seront initialisés à zero
-     * @param ligne Code proposé par le décodeur
+     * @param listPion Code proposé par le décodeur
      */
-    public Ligne(String[] ligne) {
-        this.ligne = ligne;
+    public Ligne(List<String> listPion) {
+        this.listPion = listPion;
     }
 
-    public String[] getLigne() {
-        return ligne;
+    public void placePion(List<String> listPion){
+        this.listPion = listPion;
+    }
+
+    public List<String> getLigne() {
+        return listPion;
     }
 
     public int getFicheN() {
@@ -59,8 +65,8 @@ public class Ligne {
         return ficheB;
     }
 
-    public void setLigne(String[] ligne) {
-        this.ligne = ligne;
+    public void setLigne(List<String> listPion) {
+        this.listPion = listPion;
     }
 
     public void setFicheN(int ficheN) {
@@ -90,19 +96,4 @@ public class Ligne {
         this.ficheN = n;
         this.ficheB = b;
     }
-    
-    /**
-     * place les pions proposés par le décodeur dans la ligne
-     * @param pion1
-     * @param pion2
-     * @param pion3
-     * @param pion4 
-     */
-    public void placePion(String pion1, String pion2, String pion3, String pion4){
-        this.ligne[0] = pion1;
-        this.ligne[1] = pion2;
-        this.ligne[2] = pion3;
-        this.ligne[3] = pion4;
-    }
-    
 }
