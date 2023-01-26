@@ -11,19 +11,9 @@ package tpnote;
  */
 public class Decodeur extends Joueur {
 
-    private int points; 
-    
+
     public Decodeur(String nom) {
         super(nom);
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-    
+    }    
 
 }

@@ -20,12 +20,19 @@ public abstract class Joueur {
      */
     private String nom;
 
+    
+    /**
+     * nombre de points
+     */
+    private int points;
+    
     /**
      * constructeur de joueur
      * @param nom 
      */
     protected Joueur(String nom){
         this.nom = nom;
+        this.points = 0;
     }
 
     /**
@@ -99,4 +106,12 @@ public abstract class Joueur {
     public void setNom(String nom) {
         this.nom = nom;
         }
+    
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }

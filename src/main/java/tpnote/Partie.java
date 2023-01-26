@@ -110,7 +110,7 @@ public class Partie {
         //tant qu'il reste des tours et que le décodeur n'a pas découvert
         while (!this.plateau.getPlateau().get(12-this.toursRestants).verifLigneComplete() && this.toursRestants > 0){
             this.toursRestants -= 1;
-            System.out.println("Il reste "+this.getToursRestants());
+            System.out.println("Il reste "+this.getToursRestants()+" tours.");
             
             System.out.println("Au tour du décodeur");
             this.decodeur.placer(this.plateau.getPlateau().get(12 - this.toursRestants));
