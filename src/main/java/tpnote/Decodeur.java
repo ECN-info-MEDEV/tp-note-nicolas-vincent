@@ -17,14 +17,13 @@ public class Decodeur extends Joueur {
         super(nom);
     }
 
-    /**
-     * main utilisé lors du dev pour test
-     * @param args 
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello");
-
-        Decodeur decodeur = new Decodeur("Nicolas");
-        decodeur.placer(new Ligne());
+    public int getPoints() {
+        return points;
     }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+    
+
 }
