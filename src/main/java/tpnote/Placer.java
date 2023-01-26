@@ -11,7 +11,7 @@ package tpnote;
  */
 public interface Placer {
     
-    public void Placer(Ligne ligne);
+    public void placer(Ligne ligne);
         
 
     

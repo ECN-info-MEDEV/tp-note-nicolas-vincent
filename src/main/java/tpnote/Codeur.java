@@ -10,5 +10,5 @@ package tpnote;
  * @author samyamal
  */
 public class Codeur {
-    
+    private int points;
 }

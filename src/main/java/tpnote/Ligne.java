@@ -5,6 +5,7 @@
  */
 package tpnote;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,12 @@ public class Ligne {
      * nombre de fiches blanches pour la ligne
      */
     private int ficheB ;
+
+    public Ligne() {
+        listPion = new ArrayList<>();
+        ficheN = 0;
+        ficheB = 0;
+    }
 
     /**
      * constructeur complet pour une ligne
