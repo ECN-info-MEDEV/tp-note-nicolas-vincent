@@ -11,4 +11,16 @@ package tpnote;
  */
 public class Plateau {
     
+    private Ligne[] lignes = new Ligne[12];
+
+    public Plateau() {
+    }
+
+    public Ligne[] getPlateau() {
+        return lignes;
+    }
+
+    public void setPlateau(Ligne[] plateau) {
+        this.lignes = plateau;
+    }
 }
