@@ -7,6 +7,7 @@
 package tpnote;
 
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -95,12 +96,44 @@ public class Partie {
     
     
     /**
-     * Méthode permettant de démarrer les tours de la partie jusqu'à la victoire ou la défaite
+     * Méthode permettant d'effectuer les manches successives d'une partie
+     * Après une paire de manche, on vérifie les points des joueurs
      */
     public void jeu(){
+        int nbManches = 1;
+        while(this.codeur.getPoints()==this.decodeur.getPoints()){
+            for(int i=0;i<2;i++){
+                System.out.println("Début de la Manche "+nbManches+" \n");
+                this.manche();
+                //Changement de rôle
+                Decodeur decodeur_temp = new Decodeur(this.codeur.getNom(),this.codeur.getPoints());
+                this.codeur.setNom(this.decodeur.getNom());
+                this.codeur.setPoints(this.decodeur.getPoints());
+                this.decodeur = decodeur_temp;
+                nbManches += 1;
+                System.out.println("Le codeur choisit la combinaison");
+                this.code = new Ligne();
+                this.codeur.placer(this.code);
+                this.plateau = new Plateau();
+            }
+            
+        }
+        System.out.println("Résultats \n");
+        System.out.println(this.codeur.getNom()+" a "+this.codeur.getPoints()+" \n");
+        System.out.println(this.decodeur.getNom()+" a "+this.decodeur.getPoints()+" \n");
+        
+        
+    }
+    
+    /**
+     * Méthode permettant de démarrer une manche
+     */
+    public void manche(){
         
         System.out.println("Premier tour");
         System.out.println("Au tour du décodeur");
+        this.setToursRestants(12);
+        
         this.decodeur.placer(this.plateau.getPlateau().get(12 - this.toursRestants));
         
         System.out.println("Au tour du codeur");
@@ -118,11 +151,15 @@ public class Partie {
             System.out.println("Au tour du codeur");
             this.codeur.verifie(this.plateau.getPlateau().get(12 - this.toursRestants));
         }
+        this.toursRestants -= 1;
         if (this.toursRestants>0){
             System.out.println("Victoire du décodeur");
+            this.codeur.setPoints(this.codeur.getPoints() + 12 - this.toursRestants);
         }else{
             System.out.println("Défaite du décodeur");
+            this.codeur.setPoints(this.codeur.getPoints() + 12);
         }
+        System.out.println("Fin de la manche : \n"+ this.codeur.getNom()+" a "+this.codeur.getPoints()+"points. \n"+this.decodeur.getNom()+" a "+this.decodeur.getPoints()+"points. \n");
     }
             
 
