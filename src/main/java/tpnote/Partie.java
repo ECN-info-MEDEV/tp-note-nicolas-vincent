@@ -40,7 +40,9 @@ public class Partie {
         this.toursRestants = 12;
          
         System.out.println("Le codeur choisit la combinaison");
+        this.code = new Ligne();
         this.codeur.placer(this.code);
+        this.plateau = new Plateau();
     }
 
     public static String[] getCouleurs() {
@@ -99,22 +101,22 @@ public class Partie {
         
         System.out.println("Premier tour");
         System.out.println("Au tour du décodeur");
-        this.decodeur.placer(this.plateau.getPlateau()[12 - this.toursRestants]);
+        this.decodeur.placer(this.plateau.getPlateau().get(12 - this.toursRestants));
         
         System.out.println("Au tour du codeur");
-        this.codeur.verifie(this.plateau.getPlateau()[12 - this.toursRestants]);
+        this.codeur.verifie(this.plateau.getPlateau().get(12 - this.toursRestants));
         
        
         //tant qu'il reste des tours et que le décodeur n'a pas découvert
-        while (!this.plateau.getPlateau()[12-this.toursRestants].verifLigneComplete() && this.toursRestants > 0){
+        while (!this.plateau.getPlateau().get(12-this.toursRestants).verifLigneComplete() && this.toursRestants > 0){
             this.toursRestants -= 1;
             System.out.println("Il reste "+this.getToursRestants());
             
             System.out.println("Au tour du décodeur");
-            this.decodeur.placer(this.plateau.getPlateau()[12 - this.toursRestants]);
+            this.decodeur.placer(this.plateau.getPlateau().get(12 - this.toursRestants));
         
             System.out.println("Au tour du codeur");
-            this.codeur.verifie(this.plateau.getPlateau()[12 - this.toursRestants]);
+            this.codeur.verifie(this.plateau.getPlateau().get(12 - this.toursRestants));
         }
         if (this.toursRestants>0){
             System.out.println("Victoire du décodeur");
