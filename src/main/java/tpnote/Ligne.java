@@ -56,6 +56,10 @@ public class Ligne {
         this.listPion = listPion;
     }
 
+    /**
+     * place le pions du guess sur la ligne
+     * @param listPion guess du décodeur
+     */
     public void placePion(List<String> listPion){
         this.listPion = listPion;
     }
@@ -104,6 +108,9 @@ public class Ligne {
         this.ficheB = b;
     }
     
+    /**
+     * fonction d'affichage dans le terminal de la ligne
+     */
      public void afficher(){
         System.out.println(this.listPion.get(0)+" "+this.listPion.get(1)+" "+this.listPion.get(2)+" "+this.listPion.get(3));
 
