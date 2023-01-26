@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>sample.medevdames</groupId>
     <artifactId>MedevDames</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>tpnote</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
