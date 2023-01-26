@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
+ * Joueur qui va tenter de trouver le code
  * @author samyamal
  */
 public class Decodeur extends Joueur {
@@ -19,6 +19,10 @@ public class Decodeur extends Joueur {
         super(nom);
     }
 
+    /**
+     * main utilisé lors du dev pour test
+     * @param args 
+     */
     public static void main(String[] args) {
         System.out.println("Hello");
 
