@@ -27,7 +27,7 @@ public class Plateau {
     public void afficher(){
         int ligne = 0;
         while(this.lignes[ligne] != null){
-            System.out.println(this.lignes[ligne].getLigne().get(0)+" "+this.lignes[ligne].getLigne().get(1)+" "+this.lignes[ligne].getLigne().get(2)+" "+this.lignes[ligne].getLigne().get(3));
+            this.lignes[ligne].afficher();
             System.out.println("Nombre de fiches Noires "+this.lignes[ligne].getFicheN()+"Nombre de fiches Blanches "+this.lignes[ligne].getFicheB());
         }
     }
