@@ -5,10 +5,6 @@
  */
 package tpnote;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 /**
  * Joueur qui va tenter de trouver le code
  * @author samyamal
