@@ -34,6 +34,16 @@ public abstract class Joueur {
         this.nom = nom;
         this.points = 0;
     }
+    
+    /**
+     * constructeur joueur
+     * @param nom
+     * @param points 
+     */
+    protected Joueur(String nom,int points){
+        this.nom = nom;
+        this.points = points;
+    }
 
     /**
      * permet à un joueur de placier 4 pions de couleurs
