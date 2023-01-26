@@ -17,8 +17,12 @@ public class Plateau {
     private List<Ligne> lignes;
 
     public Plateau() {
-        this.lignes = new ArrayList<>(12);
+        this.lignes = new ArrayList<>();
+        for(int i = 0;i<12;i++){
+            this.lignes.add(new Ligne());
+        }
     }
+
 
     public List<Ligne> getPlateau() {
         return lignes;
