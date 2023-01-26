@@ -16,6 +16,9 @@ public class Plateau {
     
     private List<Ligne> lignes;
 
+    /**
+     * constructeur par défaut de Plateau
+     */
     public Plateau() {
         this.lignes = new ArrayList<>();
         for(int i = 0;i<12;i++){
@@ -32,6 +35,9 @@ public class Plateau {
         this.lignes = plateau;
     }
     
+    /**
+     * affiche les lignes du plateau (code + fiches)
+     */
     public void afficher(){
         int ligne = 0;
         while(!this.lignes.get(ligne).getLigne().isEmpty()){
