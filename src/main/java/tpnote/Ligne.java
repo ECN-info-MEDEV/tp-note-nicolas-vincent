@@ -103,4 +103,9 @@ public class Ligne {
         this.ficheN = n;
         this.ficheB = b;
     }
+    
+     public void afficher(){
+        System.out.println(this.listPion.get(0)+" "+this.listPion.get(1)+" "+this.listPion.get(2)+" "+this.listPion.get(3));
+
+    }
 }
